@@ -1,331 +1,397 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
 		<title>Artefacts</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<link rel="icon" type="image/x-icon" href="../../images/portfolio.png">
+		<link rel="stylesheet" href="../../assets/css/main.css"/>
+		<noscript>
+			<link rel="stylesheet" href="../../assets/css/noscript.css"/>
+		</noscript>
 	</head>
 	<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+		<button style="position: fixed; bottom: 30px; right: 30px; z-index: 99" onclick="topFunction()" id="myBtn"><span
+				class="icon solid fa-arrow-up"></span></button>
 
-				<!-- Header -->
-				<header id="header" class="alt">
-					<h1><a href="../../index.html">Ngugi Joy Grace</a></h1>
-					<nav>
-						<a href="#menu">Menu</a>
-					</nav>
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+				<h1><a href="../../index.html">Ngugi Joy Grace</a></h1>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<div class="inner">
+					<h2>Menu</h2>
+					<ul class="links">
+						<li><a href="../../index.html">Back Home</a></li>
+						<li><a href="#footer">Contact</a></li>
+					</ul>
+					<a href="#" class="close">Close</a>
+				</div>
+			</nav>
+
+			<!-- Wrapper -->
+			<section id="wrapper">
+				<header>
+					<div class="inner">
+						<h2><a href="../../index.html"><span class="icon solid fa-home"></span></a> > <a href="big-data.html">Module</a>
+							> Artefacts</h2>
+						<p>Deciphering Big Data</p>
+					</div>
 				</header>
 
-				<!-- Menu -->
-				<nav id="menu">
+				<!-- Content -->
+				<div class="wrapper">
 					<div class="inner">
-						<h2>Menu</h2>
-						<ul class="links">
-							<li><a href="../../index.html">Back Home</a></li>
-							<li><a href="#footer">Contact</a></li>
+
+						<h3 class="major">1. Introduction</h3>
+						<p>
+							In this unit, the coding exercises delve deeply into data wrangling techniques as elaborated by
+							Kazil and Jarmul (2016) in their book on Data Wrangling.
+							Specifically, chapters 4 and 5 were explored, which provide a comprehensive guide on manipulating
+							and extracting data from PDF and Excel files using Python.
+						</p>
+						<p>
+							Chapter 4 puts the focus on working with Excel files. Excel, being one of the most widely used data
+							storage
+							formats, presents its own unique set of challenges and opportunities for data wranglers. In this
+							chapter,
+							Kazil and Jarmul (2016) introduce the <code>xlrd</code> library for Python, which facilitates both
+							reading from and
+							writing to Excel files.
+						</p>
+						<p>
+							Chapter 5 provides a detailed walkthrough on parsing PDF files. This chapter explores the challenges
+							often
+							faced while working with PDFs, given their fixed-layout format. Kazil and Jarmul (2016) offer
+							insights into
+							various Python libraries such as <code>slate3k</code> and <code>PDFTables</code>,
+							explaining their strengths and use cases.
+						</p>
+						<p>
+							It was however noted that xlrd no longer supports .xlsx files and therefore an alternative was used
+							i.e.,
+							<code>openpyxl</code>. During research more libraries were also found as being useful in further
+							work for PDF parsing e.g.
+							<code>tabula</code>, <code>PyPDF2</code> and <code>camelot</code>
+						</p>
+						<h6>Links:</h6>
+						<ul class="actions stacked">
+							<li><a href="https://github.com/Ngugi-Joy-Grace/deciphering-big-data/tree/master/code/unit%201"
+								   target="_blank" class="button primary"><span class="icon brands fa-github"></span> Unit 1</a>
+							</li>
 						</ul>
-						<a href="#" class="close">Close</a>
+
+
+						<h3 class="major">2. Data Sources</h3>
+						<p>
+							This section compiles the work done in <code>Unit 2: Introduction to Data Types and Formats</code>
+							and
+							<br>
+							<code>Unit 3: Data Collection and Storage</code>
+						</p>
+						<h6>Tasks:</h6>
+						<ul>
+							<li>Data extraction in different coding exercises from different data sources i.e., XML, JSON and
+								CSV.
+							</li>
+							<li>Web scraping using <code>BeautifulSoup</code> library from a job site for a Data Scientist role
+							</li>
+						</ul>
+						<h6>Take away:</h6>
+						<p>
+							From these exercises, the fundamentals of web scraping and data extraction from various sources
+							were explored, inspecting elements from a website and how to deal with the data formats mentioned
+							above was also learned.
+							This work also introduced dictionaries in Python and how to use them to represent data
+						</p>
+						<h6>Links:</h6>
+						<ul class="actions">
+							<li><a href="https://github.com/Ngugi-Joy-Grace/deciphering-big-data/tree/master/code/unit%202"
+								   target="_blank" class="button primary"><span class="icon brands fa-github"></span> Unit 2</a>
+							</li>
+							<li><a href="https://github.com/Ngugi-Joy-Grace/deciphering-big-data/tree/master/code/unit%203"
+								   target="_blank" class="button primary"><span class="icon brands fa-github"></span> Unit 3</a>
+							</li>
+						</ul>
+
+
+						<h3 class="major">3. Data Cleaning</h3>
+						<p>
+							This work combines work from <code>Unit 4: Data Cleaning and Transformation</code> and
+							<br>
+							<code>Unit 5: Data Cleaning and Automating Data Collections</code>
+						</p>
+						<h6>Tasks:</h6>
+						<ul>
+							<li>Download and combine 3 datasets on UNICEF: Child Labour</li>
+							<li>Investigation, Matching and Formatting of this data</li>
+							<li>Writing a script to automate data cleaning using Python <code>functions</code></li>
+						</ul>
+						<h6>Take away:</h6>
+						<p>
+							The work in this section underscores the importance of data cleaning as a step in the data
+							management pipeline.
+							It presents data cleaning as an iterative process. <br> During the research done for this section,
+							the <a href="https://peps.python.org/pep-0020/" target="_blank">Zen of Python</a>
+							was used to better understand writing more efficient and optimized scripts for data interaction.
+						</p>
+						<h6>Links:</h6>
+						<ul class="actions">
+							<li>
+								<a href="https://github.com/Ngugi-Joy-Grace/deciphering-big-data/tree/master/code/unit%204%20and%205"
+								   target="_blank" class="button primary"><span class="icon brands fa-github"></span> Unit 4 and
+									5</a></li>
+						</ul>
+
+
+						<h3 class="major">4. Database Design</h3>
+						<p>
+							This section is centered around the work done in <code>Unit 6: Database Design and
+							Normalisation</code> and
+							<br>
+							<code>Unit 7: Constructing Normalised Tables and Database Build</code>
+						</p>
+						<h6>Tasks:</h6>
+						<ul>
+							<li>Team Project: Database Design Report</li>
+							<li>Normalisation task</li>
+							<li>Data build task</li>
+						</ul>
+						<h6>Take away:</h6>
+						<p>
+							In these two units, the creation of logical database designs, entity relationship diagrams,
+							performing normalisation, and SQL scripting created a better understanding of handling data meant to
+							be stored in a database.
+							The importance of primary keys and foreign keys was also reinforced while bringing in the concept
+							of relational databases.
+						</p>
+						<h6>Links:</h6>
+						<ul class="actions">
+							<li><a href="https://drive.google.com/drive/folders/1TT-nPCrUUnez-hMtxvxldfe-N2zp3vCX?usp=sharing"
+								   target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit
+								6</a></li>
+							<li><a href="https://drive.google.com/drive/folders/1eQZIy2MgRfKPxCe5LAeEc7eRawOju2EN?usp=sharing"
+								   target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit
+								7</a></li>
+						</ul>
+
+
+						<h3 class="major">5. Compliance</h3>
+						<p>
+							<code>Unit 8: Compliance and Regulatory Framework for Managing Data</code> was covered for this
+							section
+						</p>
+						<h6>Tasks:</h6>
+						<ul>
+							<li>Comparing Compliance Laws against the GDPR</li>
+						</ul>
+						<h6>Take away:</h6>
+						<p>
+							This unit provided a comprehensive understanding of the <code>GDPR</code>'s overarching principles
+							and its implications for organisations and individuals. Particularly illuminating was the
+							comparative analysis between GDPR and other global data protection acts,such as <code>Kenya's
+							Data Protection Act (DPA)</code>, <code>Colombian Data Protection Law (DPL)</code> and
+							<br>
+							<code> UK's
+								Information Commissioner's Office (ICO)</code>,
+							which highlighted the nuances and commonalities across different legal frameworks.
+							Such comparisons not only underlined the global shift towards more stringent data
+							protection measures but also emphasised the need for organisations and data professionals to be
+							agile
+							and informed to navigate this multifaceted legal landscape.
+						</p>
+						<h6>Links:</h6>
+						<ul class="actions">
+							<li><a href="https://drive.google.com/drive/folders/14SEDzHhFSd20z9cNWc8fB1d6oSMvuWst?usp=sharing"
+								   target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit
+								8</a></li>
+						</ul>
+
+
+						<h3 class="major">6. Technologies</h3>
+						<p>
+							This work covered <code>Unit 9: Database Management Systems (DBMS) and Models</code>,
+							<br>
+							<code>Unit 10: More on APIs (Application Programming Interfaces) for Data Parsing</code> and
+							<br> <code>Unit 11: DBMS Transaction and Recovery</code>
+						</p>
+						<h6>Tasks:</h6>
+						<ul>
+							<li>Team Project: Executive Summary</li>
+							<li>Team Project: API Security Requirements</li>
+							<li>Evaluating the Grandfather-father-son backup procedure</li>
+						</ul>
+						<h6>Take away:</h6>
+						<p>
+							The executive summary improved the ability to explain technical requirements as well as writing
+							concise and well documented
+							reports. The interaction with different APIs created an understanding on how standard data
+							collection/transmission
+							techniques are used as well as the importance on securing these communication methods. The creation
+							of backups and technique
+							of backing up was explored and this introduced the various ways in which backups procedures can be
+							undertaken
+							depending on frequency and type of data being backed up. SQLite was a welcome addition to the
+							various database managament systems that
+							can be used for storing data.
+						</p>
+						<h6>Links:</h6>
+						<ul class="actions">
+							<li><a href="https://drive.google.com/drive/folders/15FsOBYXM-cSvOcbI-_YKKSf2wA2-jhHp?usp=sharing"
+								   target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit
+								9</a></li>
+							<li><a href="https://drive.google.com/drive/folders/14gAxsWndh7nyZ2zg6ilQJWncRxQ2lRzR?usp=sharing"
+								   target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit
+								10</a></li>
+							<li><a href="https://drive.google.com/drive/folders/14kBqF23QDZFEH02hvSxhZp9LUatk4jrt?usp=sharing"
+								   target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit
+								11</a></li>
+						</ul>
+
+
+						<h3 class="major">7. Future</h3>
+						<p>
+							This covered work from <code>Unit 12: Future of Big Data Analytics</code>
+						</p>
+						<h6>Tasks:</h6>
+						<ul>
+							<li>Reflective piece</li>
+							<li>Content Challenge</li>
+						</ul>
+						<h6>Take away:</h6>
+						<p>
+							The future of big data analytics is set to be transformative, reshaping industries,
+							enhancing decision-making, and unlocking new possibilities across various sectors.
+							As computational capacities expand and algorithms become more sophisticated, the
+							ability to process and interpret big datasets in real-time will revolutionise
+							personalised medicine, predictive maintenance, smart cities, and more.
+							The integration artificial intelligence and machine learning
+							with big data analytics promises to yield insights that were previously inconceivable,
+							enabling enhanced forecasting. A good example of this is the recent
+							wave of generative AI models and large language models created to solve different sets of problems.
+							However, with this surge in data-driven decision-making, the ethical implications
+							concerning data privacy, security, and governance will become increasingly paramount,
+							necessitating rigorous frameworks and standards to ensure responsible and transparent
+							utilisation of big data.
+						</p>
+						<h6>Links:</h6>
+						<ul class="actions">
+							<li><a href="https://drive.google.com/drive/folders/157wwTFzWDSLIZn1jO4P9bF-NjzZF6qsw?usp=sharing"
+								   target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit
+								12</a></li>
+						</ul>
+
+						<h3 class="major">References</h3>
+						<p>
+							Kazil, J., & Jarmul, K. (2016).
+							Data Wrangling with Python: Tips and Tools to Make Your Life Easier (1st ed.).
+							O’Reilly Media, Incorporate.
+							Available from:
+							https://ebookcentral.proquest.com/lib/universityofessexebooks/reader.action?docID=4543981 [Accessed
+							12 October 2023].
+						</p>
+
+						<section class="features">
+							<article>
+								<a href="#" class="image"><img src="../../images/pic04.jpg" alt=""/></a>
+								<h3 class="major">Sed feugiat lorem</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus
+									ultrices.</p>
+								<a href="#" class="special">Learn more</a>
+							</article>
+							<article>
+								<a href="#" class="image"><img src="../../images/pic05.jpg" alt=""/></a>
+								<h3 class="major">Nisl placerat</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus
+									ultrices.</p>
+								<a href="#" class="special">Learn more</a>
+							</article>
+						</section>
+
 					</div>
-				</nav>
+				</div>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<header>
-							<div class="inner">
-								<h2><a href="../../index.html"><span class="icon solid fa-home"></span></a> > <a href="big-data.html">Module</a> > Artefacts</h2>
-								<p>Deciphering Big Data</p>
+			</section>
+
+			<!-- Footer -->
+			<section id="footer">
+				<div class="inner">
+					<h2 class="major">Get in touch</h2>
+					<p>Reach out and let's connect</p>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name"/>
 							</div>
-						</header>
-
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
-
-									<h3 class="major">1. Introduction</h3>
-									<p>
-										In this unit, the coding exercises delve deeply into data wrangling techniques as elaborated by Kazil and Jarmul (2016) in their book on Data Wrangling.
-										Specifically, chapters 4 and 5 were explored, which provide a comprehensive guide on manipulating
-										and extracting data from PDF and Excel files using Python.
-									</p>
-									<p>
-										Chapter 4 puts the focus on working with Excel files. Excel, being one of the most widely used data storage
-										formats, presents its own unique set of challenges and opportunities for data wranglers. In this chapter,
-										Kazil and Jarmul (2016) introduce the <code>xlrd</code> library for Python, which facilitates both reading from and
-										writing to Excel files.
-									</p>
-									<p>
-										Chapter 5 provides a detailed walkthrough on parsing PDF files. This chapter explores the challenges often
-										faced while working with PDFs, given their fixed-layout format. Kazil and Jarmul (2016) offer insights into
-										various Python libraries such as <code>slate3k</code> and <code>PDFTables</code>,
-										explaining their strengths and use cases.
-									</p>
-									<p>
-										It was however noted that xlrd no longer supports .xlsx files and therefore an alternative was used i.e.,
-										<code>openpyxl</code>. During research more libraries were also found as being useful in further work for PDF parsing e.g.
-										<code>tabula</code>, <code>PyPDF2</code> and <code>camelot</code>
-									</p>
-									<h6>Links:</h6>
-									<ul class="actions stacked">
-										<li><a href="https://github.com/Ngugi-Joy-Grace/deciphering-big-data/tree/master/code/unit%201" target="_blank" class="button primary"><span class="icon brands fa-github"></span> Unit 1</a></li>
-									</ul>
-
-
-									<h3 class="major">2. Data Sources</h3>
-									<p>
-										This section compiles the work done in <code>Unit 2: Introduction to Data Types and Formats</code> and
-										<br>
-										<code>Unit 3: Data Collection and Storage</code>
-									</p>
-									<h6>Tasks:</h6>
-									<ul>
-										<li>Data extraction in different coding exercises from different data sources i.e., XML, JSON and CSV.</li>
-										<li>Web scraping using <code>BeautifulSoup</code> library from a job site for a Data Scientist role</li>
-									</ul>
-									<h6>Take away:</h6>
-									<p>
-										From these exercises, the fundamentals of web scraping and data extraction from various sources
-										were explored, inspecting elements from a website and how to deal with the data formats mentioned above was also learned.
-										This work also introduced dictionaries in Python and how to use them to represent data
-									</p>
-									<h6>Links:</h6>
-									<ul class="actions">
-										<li><a href="https://github.com/Ngugi-Joy-Grace/deciphering-big-data/tree/master/code/unit%202" target="_blank" class="button primary"><span class="icon brands fa-github"></span> Unit 2</a></li>
-										<li><a href="https://github.com/Ngugi-Joy-Grace/deciphering-big-data/tree/master/code/unit%203" target="_blank" class="button primary"><span class="icon brands fa-github"></span> Unit 3</a></li>
-									</ul>
-
-
-									<h3 class="major">3. Data Cleaning</h3>
-									<p>
-										This work combines work from <code>Unit 4: Data Cleaning and Transformation</code> and
-										<br>
-										<code>Unit 5: Data Cleaning and Automating Data Collections</code>
-									</p>
-									<h6>Tasks:</h6>
-									<ul>
-										<li>Download and combine 3 datasets on UNICEF: Child Labour</li>
-										<li>Investigation, Matching and Formatting of this data</li>
-										<li>Writing a script to automate data cleaning using Python <code>functions</code></li>
-									</ul>
-									<h6>Take away:</h6>
-									<p>
-										The work in this section underscores the importance of data cleaning as a step in the data management pipeline.
-										It presents data cleaning as an iterative process. <br> During the research done for this section, the <a href="https://peps.python.org/pep-0020/" target="_blank">Zen of Python</a>
-										was used to better understand writing more efficient and optimized scripts for data interaction.
-									</p>
-									<h6>Links:</h6>
-									<ul class="actions">
-										<li><a href="https://github.com/Ngugi-Joy-Grace/deciphering-big-data/tree/master/code/unit%204%20and%205" target="_blank" class="button primary"><span class="icon brands fa-github"></span> Unit 4 and 5</a></li>
-									</ul>
-
-
-									<h3 class="major">4. Database Design</h3>
-									<p>
-										This section is centered around the work done in <code>Unit 6: Database Design and Normalisation</code> and
-										<br>
-										<code>Unit 7: Constructing Normalised Tables and Database Build</code>
-									</p>
-									<h6>Tasks:</h6>
-									<ul>
-										<li>Team Project: Database Design Report</li>
-										<li>Normalisation task</li>
-										<li>Data build task</li>
-									</ul>
-									<h6>Take away:</h6>
-									<p>
-										In these two units, the creation of logical database designs, entity relationship diagrams,
-										performing normalisation, and SQL scripting created a better understanding of handling data meant to be stored in a database.
-										The importance of primary keys and foreign keys was also reinforced while bringing in the concept
-										of relational databases.
-									</p>
-									<h6>Links:</h6>
-									<ul class="actions">
-										<li><a href="https://drive.google.com/drive/folders/1TT-nPCrUUnez-hMtxvxldfe-N2zp3vCX?usp=sharing" target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit 6</a></li>
-										<li><a href="https://drive.google.com/drive/folders/1eQZIy2MgRfKPxCe5LAeEc7eRawOju2EN?usp=sharing" target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit 7</a></li>
-									</ul>
-
-
-									<h3 class="major">5. Compliance</h3>
-									<p>
-										<code>Unit 8: Compliance and Regulatory Framework for Managing Data</code> was covered for this section
-									</p>
-									<h6>Tasks:</h6>
-									<ul>
-										<li>Comparing Compliance Laws against the GDPR</li>
-									</ul>
-									<h6>Take away:</h6>
-									<p>
-										This unit provided a comprehensive understanding of the <code>GDPR</code>'s overarching principles
-										and its implications for organisations and individuals. Particularly illuminating was the
-										comparative analysis between GDPR and other global data protection acts,such as <code>Kenya's
-										Data Protection Act (DPA)</code>, <code>Colombian Data Protection Law (DPL)</code> and
-										<br>
-										<code> UK's
-										Information Commissioner's Office (ICO)</code>,
-										which highlighted the nuances and commonalities across different legal frameworks.
-										Such comparisons not only underlined the global shift towards more stringent data
-										protection measures but also emphasised the need for organisations and data professionals to be agile
-										and informed to navigate this multifaceted legal landscape.
-									</p>
-									<h6>Links:</h6>
-									<ul class="actions">
-										<li><a href="https://drive.google.com/drive/folders/14SEDzHhFSd20z9cNWc8fB1d6oSMvuWst?usp=sharing" target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit 8</a></li>
-									</ul>
-
-
-									<h3 class="major">6. Technologies</h3>
-									<p>
-										This work covered <code>Unit 9: Database Management Systems (DBMS) and Models</code>,
-										<br>
-										<code>Unit 10: More on APIs (Application Programming Interfaces) for Data Parsing</code> and
-										<br> <code>Unit 11: DBMS Transaction and Recovery</code>
-									</p>
-									<h6>Tasks:</h6>
-									<ul>
-										<li>Team Project: Executive Summary</li>
-										<li>Team Project: API Security Requirements</li>
-										<li>Evaluating the Grandfather-father-son backup procedure</li>
-									</ul>
-									<h6>Take away:</h6>
-									<p>
-										The executive summary improved the ability to explain technical requirements as well as writing concise and well documented
-										reports. The interaction with different APIs created an understanding on how standard data collection/transmission
-										techniques are used as well as the importance on securing these communication methods. The creation of backups and technique
-										of backing up was explored and this introduced the various ways in which backups procedures can be undertaken
-										depending on frequency and type of data being backed up. SQLite was a welcome addition to the various database managament systems that
-										can be used for storing data.
-									</p>
-									<h6>Links:</h6>
-									<ul class="actions">
-										<li><a href="https://drive.google.com/drive/folders/15FsOBYXM-cSvOcbI-_YKKSf2wA2-jhHp?usp=sharing" target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit 9</a></li>
-										<li><a href="https://drive.google.com/drive/folders/14gAxsWndh7nyZ2zg6ilQJWncRxQ2lRzR?usp=sharing" target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit 10</a></li>
-										<li><a href="https://drive.google.com/drive/folders/14kBqF23QDZFEH02hvSxhZp9LUatk4jrt?usp=sharing" target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit 11</a></li>
-									</ul>
-
-
-									<h3 class="major">7. Future</h3>
-									<p>
-										This covered work from <code>Unit 12: Future of Big Data Analytics</code>
-									</p>
-									<h6>Tasks:</h6>
-									<ul>
-										<li>Reflective piece</li>
-										<li>Content Challenge</li>
-									</ul>
-									<h6>Take away:</h6>
-									<p>
-										The future of big data analytics is set to be transformative, reshaping industries,
-										enhancing decision-making, and unlocking new possibilities across various sectors.
-										As computational capacities expand and algorithms become more sophisticated, the
-										ability to process and interpret big datasets in real-time will revolutionise
-										personalised medicine, predictive maintenance, smart cities, and more.
-										The integration artificial intelligence and machine learning
-										with big data analytics promises to yield insights that were previously inconceivable,
-										enabling enhanced forecasting. A good example of this is the recent
-										wave of generative AI models and large language models created to solve different sets of problems.
-										However, with this surge in data-driven decision-making, the ethical implications
-										concerning data privacy, security, and governance will become increasingly paramount,
-										necessitating rigorous frameworks and standards to ensure responsible and transparent
-										utilisation of big data.
-									</p>
-									<h6>Links:</h6>
-									<ul class="actions">
-										<li><a href="https://drive.google.com/drive/folders/157wwTFzWDSLIZn1jO4P9bF-NjzZF6qsw?usp=sharing" target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit 12</a></li>
-									</ul>
-
-									<h3 class="major">References</h3>
-									<p>
-										Kazil, J., & Jarmul, K. (2016).
-										Data Wrangling with Python: Tips and Tools to Make Your Life Easier (1st ed.).
-										O’Reilly Media, Incorporate.
-										Available from: https://ebookcentral.proquest.com/lib/universityofessexebooks/reader.action?docID=4543981  [Accessed 12 October 2023].
-									</p>
-
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="../../images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="../../images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-									</section>
-
-								</div>
+							<div class="field">
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email"/>
 							</div>
-
-					</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Reach out and let's connect</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Nairobi, Kenya
-								</li>
-								<li class="icon solid fa-phone">+254 712 345 678</li>
-								<li class="icon solid fa-envelope"><a href="mailto:jngugi.grace@gmail.com">jngugi.grace@gmail.com</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Ngugi Joy Grace </li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="4"></textarea>
+							</div>
 						</div>
-					</section>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message"/></li>
+						</ul>
+					</form>
+					<ul class="contact">
+						<li class="icon solid fa-home">
+							Nairobi, Kenya
+						</li>
+						<li class="icon solid fa-phone">+254 712 345 678</li>
+						<li class="icon solid fa-envelope"><a href="mailto:jngugi.grace@gmail.com">jngugi.grace@gmail.com</a>
+						</li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Ngugi Joy Grace</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</section>
 
-			</div>
+		</div>
 
 		<!-- Scripts -->
-			<script src="../../assets/js/jquery.min.js"></script>
-			<script src="../../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../../assets/js/browser.min.js"></script>
-			<script src="../../assets/js/breakpoints.min.js"></script>
-			<script src="../../assets/js/util.js"></script>
-			<script src="../../assets/js/main.js"></script>
-			<script>
-				var acc = document.getElementsByClassName("accordion");
-				var i;
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../../assets/js/browser.min.js"></script>
+		<script src="../../assets/js/breakpoints.min.js"></script>
+		<script src="../../assets/js/util.js"></script>
+		<script src="../../assets/js/main.js"></script>
+		<script>
+			// Get the button
+			let mybutton = document.getElementById("myBtn");
 
-				for (i = 0; i < acc.length; i++) {
-					acc[i].addEventListener("click", function() {
-						this.classList.toggle("active");
-						var panel = this.nextElementSibling;
-						if (panel.style.display === "block") {
-							panel.style.display = "none";
-						} else {
-							panel.style.display = "block";
-						}
-					});
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function () {
+				scrollFunction()
+			};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					mybutton.style.display = "block";
+				} else {
+					mybutton.style.display = "none";
 				}
-			</script>
+			}
 
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
 	</body>
 </html>
