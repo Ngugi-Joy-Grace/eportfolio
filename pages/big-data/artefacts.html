@@ -36,7 +36,7 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Artefacts</h2>
+								<h2><a href="../../index.html"><span class="icon solid fa-home"></span></a> > <a href="big-data.html">Module</a> > Artefacts</h2>
 								<p>Deciphering Big Data</p>
 							</div>
 						</header>
@@ -213,18 +213,28 @@
 									<h6>Tasks:</h6>
 									<ul>
 										<li>Reflective piece</li>
+										<li>Content Challenge</li>
 									</ul>
 									<h6>Take away:</h6>
-									<ul>
-										<li></li>
-									</ul>
+									<p>
+										The future of big data analytics is set to be transformative, reshaping industries,
+										enhancing decision-making, and unlocking new possibilities across various sectors.
+										As computational capacities expand and algorithms become more sophisticated, the
+										ability to process and interpret big datasets in real-time will revolutionise
+										personalised medicine, predictive maintenance, smart cities, and more.
+										The integration artificial intelligence and machine learning
+										with big data analytics promises to yield insights that were previously inconceivable,
+										enabling enhanced forecasting. A good example of this is the recent
+										wave of generative AI models and large language models created to solve different sets of problems.
+										However, with this surge in data-driven decision-making, the ethical implications
+										concerning data privacy, security, and governance will become increasingly paramount,
+										necessitating rigorous frameworks and standards to ensure responsible and transparent
+										utilisation of big data.
+									</p>
 									<h6>Links:</h6>
 									<ul class="actions">
 										<li><a href="https://drive.google.com/drive/folders/157wwTFzWDSLIZn1jO4P9bF-NjzZF6qsw?usp=sharing" target="_blank" class="button primary"><span class="icon brands fa-google-drive"></span> Unit 12</a></li>
 									</ul>
-
-
-
 
 									<h3 class="major">References</h3>
 									<p>
@@ -258,7 +268,7 @@
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
-							<p>Reach out to me and let's connect</p>
+							<p>Reach out and let's connect</p>
 							<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
@@ -300,6 +310,22 @@
 			<script src="../../assets/js/breakpoints.min.js"></script>
 			<script src="../../assets/js/util.js"></script>
 			<script src="../../assets/js/main.js"></script>
+			<script>
+				var acc = document.getElementsByClassName("accordion");
+				var i;
+
+				for (i = 0; i < acc.length; i++) {
+					acc[i].addEventListener("click", function() {
+						this.classList.toggle("active");
+						var panel = this.nextElementSibling;
+						if (panel.style.display === "block") {
+							panel.style.display = "none";
+						} else {
+							panel.style.display = "block";
+						}
+					});
+				}
+			</script>
 
 	</body>
 </html>
