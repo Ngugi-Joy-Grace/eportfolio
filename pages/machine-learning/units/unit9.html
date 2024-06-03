@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Artefacts</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/x-icon" href="../../../images/portfolio.png">
+    <link rel="stylesheet" href="../../../assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="../../../assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body class="is-preload">
+
+<button style="position: fixed; bottom: 30px; right: 30px; z-index: 99" onclick="topFunction()" id="myBtn"><span
+        class="icon solid fa-arrow-up"></span></button>
+
+<!-- Page Wrapper -->
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="../../../index.html">Ngugi Joy Grace</a></h1>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <div class="inner">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="../../../index.html">Back Home</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <a href="#" class="close">Close</a>
+        </div>
+    </nav>
+
+    <!-- Wrapper -->
+    <section id="wrapper">
+        <header>
+            <div class="inner">
+                <h2>
+                    <a href="../../../index.html">
+                        <span class="icon solid fa-home"></span>
+                    </a>
+                    >
+                    <a href="../machine-learning.html">Machine Learning</a>
+                    >
+                    <a href="../units.html">Units</a>
+                    >
+                    Unit 9
+                </h2>
+                <p>Machine Learning</p>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="wrapper">
+            <div class="inner">
+
+                <h3 class="major">Unit 9: Introduction to Convolutional Neural Networks (CNNs)</h3>
+                <img src="../../../images/ml/cnn.png" alt="">
+                <p>
+                    Convolutional Neural Networks (CNNs) are a specialised type of artificial neural network designed primarily for image and video recognition, as well as other tasks that involve grid-like data (Sewak et al., 2018). They have proven to be highly effective in tasks such as object detection, face recognition, and image segmentation (Sharma, 2023). This unit covered the foundational concepts of CNNs, their architecture, and their applications. This was done through reviewing of an implementation Convolutional Neural Network (CNN) for object recognition using the Keras library on the CIFAR 10 dataset.
+                </p>
+                <p>
+                    Here's a breakdown of the notebook:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Importing necessary libraries</strong> <br>
+                    The notebook begins by importing necessary libraries such as TensorFlow and Keras. These libraries provide the necessary functions and classes to create and train a deep learning model.
+                    </li>
+
+                    <li>
+                        <strong>Loading the CIFAR-10 dataset</strong> <br>
+                    The CIFAR-10 dataset is a popular dataset for image classification, containing 60,000 32x32 color images in 10 different classes (Krizhevsky, 2009). The dataset is divided into 50,000 training images and 10,000 testing images. The dataset is loaded using the `cifar10.load_data()` function.
+                    </li>
+
+                    <li>
+                        <strong>Preprocessing the data</strong> <br>
+                    The images and labels are preprocessed before they are fed into the model. The images are normalised to have values between 0 and 1, and the labels are one-hot encoded.
+                    </li>
+
+                    <li>
+                        <strong>Creating the CNN model</strong> <br>
+                    The model is created using Keras' Sequential API. The model consists of several convolutional layers followed by max pooling layers. After the convolutional base, the model has one or more dense layers for classification. The model uses the ReLU activation function in the convolutional layers and the softmax activation function in the final layer.
+                    </li>
+
+                    <li>
+                        <strong>Compiling the model</strong> <br>
+                    The model is compiled with the Adam optimizer, the categorical crossentropy loss function, and accuracy as the metric.
+                    </li>
+
+                    <li>
+                        <strong>Training the model</strong> <br>
+                    The model is trained on the training data using the `fit()` function. The number of epochs (25) are defined in this step. Early stopping was also added to the model to improve the model’s generalization ability, that is to avoid overfitting. The performance of the model (loss and accuracy) on both the training and validation data is plotted. It is also noted that while the model’s training was set for 25 epochs, it did stop at 9 epochs due the early stopping observing no improvement in the validation loss.
+                        <p>
+                            <img src="../../../images/ml/vs-validation-loss.png" alt="" width="300">
+                            <img src="../../../images/ml/vs-validation-accuracy.png" alt="" width="326"></img>
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Evaluating the model</strong>
+                        The model's performance is evaluated on the test data using the `predict()` function. The predictions are then compared with the actual labels to calculate the precision, recall, f1-score, and support.
+                        <img src="../../../images/ml/evaluation.png" alt="">
+                        <p>
+                            The model performs best on class 9, with the highest precision (0.84) and a good f1-score (0.75). The lowest performance is observed in class 3, with the lowest precision (0.47), recall (0.53), and f1-score (0.49). The overall accuracy of the model is 67%, with macro and weighted averages of precision, recall, and f1-score around 0.67-0.68, indicating consistent performance across classes with room for improvement.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Visualising a single prediction</strong>
+                        The notebook ends by visualising a single image from the test set, making a prediction for this image using the trained model, and comparing the prediction to the actual label.
+                        <img src="../../../images/ml/classification.png" alt="">
+                        <p>From this snapshot above the image shown is correctly classified by the CNN as a dog. The predicted class (array([5])) matches the actual label ('dog'), indicating that the model has learned to correctly identify this image.</p>
+                        <p>This example demonstrates the process of using a trained CNN to classify new images by reshaping the input, predicting the class, and mapping the class to the corresponding label.</p>
+                    </li>
+
+                </ul>
+
+
+
+                <h6>Links:</h6>
+                <ul class="actions">
+                    <li>
+                        <a href="https://github.com/Ngugi-Joy-Grace/machine-learning/blob/main/9/Unit09%20Ex1%20Convolutional%20Neural%20Networks%20(CNN)%20-%20Object%20Recognition.ipynb"
+                           target="_blank" class="button small primary">
+                            <span class="icon brands fa-github"></span>
+                            CNN - Object Recognition
+                        </a>
+                    </li>
+                </ul>
+
+
+                <h3 class="major">References</h3>
+                <p>
+                    Krizhevsky, A. (2009) CIFAR-10 and CIFAR-100 datasets Available from: <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank">https://www.cs.toronto.edu/~kriz/cifar.html</a> [Accessed 24 May 2024].
+                </p>
+                <p>
+                    Sewak, M., Karim, M.R. & Pujari, P. (2018). Practical Convolutional Neural Networks. Packt Publishing. Available from:
+                    <a href="https://learning.oreilly.com/library/view/practical-convolutional-neural/9781788392303/" target="_blank">https://learning.oreilly.com/library/view/practical-convolutional-neural/9781788392303/</a> [Accessed 24 May 2024].
+                </p>
+                <p>
+                    Sharma, P., 2023. Applications of Convolutional Neural Networks(CNN). Analytics Vidhya. Available from:
+                    <a href="https://www.analyticsvidhya.com/blog/2021/10/applications-of-convolutional-neural-networkscnn/" target="_blank">https://www.analyticsvidhya.com/blog/2021/10/applications-of-convolutional-neural-networkscnn/</a> [Accessed 27 May 2024].
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="inner">
+            <h2 class="major">Get in touch</h2>
+            <p>Reach out and let's connect</p>
+            <form method="post" action="#">
+                <div class="fields">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name"/>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"/>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="4"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message"/></li>
+                </ul>
+            </form>
+            <ul class="contact">
+                <li class="icon solid fa-home">
+                    Nairobi, Kenya
+                </li>
+                <li class="icon solid fa-phone">+254 712 345 678</li>
+                <li class="icon solid fa-envelope"><a href="mailto:jngugi.grace@gmail.com">jngugi.grace@gmail.com</a>
+                </li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Ngugi Joy Grace</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../../assets/js/jquery.min.js"></script>
+<script src="../../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../../assets/js/browser.min.js"></script>
+<script src="../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../assets/js/util.js"></script>
+<script src="../../../assets/js/main.js"></script>
+<script src="../../../assets/js/custom.js"></script>
+</body>
+</html>

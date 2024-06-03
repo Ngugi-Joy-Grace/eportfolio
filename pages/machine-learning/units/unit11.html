@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Artefacts</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/x-icon" href="../../../images/portfolio.png">
+    <link rel="stylesheet" href="../../../assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="../../../assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body class="is-preload">
+
+<button style="position: fixed; bottom: 30px; right: 30px; z-index: 99" onclick="topFunction()" id="myBtn"><span
+        class="icon solid fa-arrow-up"></span></button>
+
+<!-- Page Wrapper -->
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="../../../index.html">Ngugi Joy Grace</a></h1>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <div class="inner">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="../../../index.html">Back Home</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <a href="#" class="close">Close</a>
+        </div>
+    </nav>
+
+    <!-- Wrapper -->
+    <section id="wrapper">
+        <header>
+            <div class="inner">
+                <h2>
+                    <a href="../../../index.html">
+                        <span class="icon solid fa-home"></span>
+                    </a>
+                    >
+                    <a href="../machine-learning.html">Machine Learning</a>
+                    >
+                    <a href="../units.html">Units</a>
+                    >
+                    Unit 11
+                </h2>
+                <p>Machine Learning</p>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="wrapper">
+            <div class="inner">
+
+                <h3 class="major">Unit 11: Model Selection and Evaluation</h3>
+
+                <p>
+                    This unit, nearing the end of the module, focused on various model selection and evaluation techniques.
+                </p>
+                <p>
+                    According to Krishna (2021):
+                </p>
+                <ul>
+                    <li><code>Model selection</code> involves choosing the most appropriate learning algorithm to model data effectively. For instance, when addressing a classification problem, one might evaluate options such as Logistic Regression, Support Vector Machines, decision trees, among others. Similarly, when tackling a regression problem, decisions must be made regarding the complexity and degree of the regression techniques applied.</li>
+                    <li><code>Model evaluation</code> is the process of determining a model's performance on unseen data, essentially assessing its generalization capabilities. This evaluation involves testing the model's performance across various metrics, including accuracy, precision, recall, F1-score, and AUC-ROC, to ensure it can generalize well to new, unseen data.</li>
+                </ul>
+                <p>
+                    A Jupyter notebook was provided to review and study the different performance metrics. Below is the discussion of each metric highlighted in the notebook.
+                </p>
+                <ol>
+                    <li>
+                        <strong>Confusion Matrix</strong>
+                        <p>While accuracy is the most common evaluation metric, representing the proportion of correct predictions made by the model, it does not provide detailed insights into the performance of the model on specific classes. This is where the confusion matrix becomes invaluable. A confusion matrix offers an introspective view into the predictions of each class, breaking down the model's performance into four categories: True Positive (TP), True Negative (TN), False Positive (FP), and False Negative (FN) . This detailed breakdown allows for a deeper understanding of how well the model is performing across different classes, identifying areas where the model excels and where it may need improvement. For example, it can highlight if the model is particularly good at identifying one class but frequently misclassifies another, enabling more targeted refinements and optimizations.</p>
+                        <img src="../../../images/ml/confusion-matrix.png" alt=""> <br>
+                        (Zheng, 2015)
+                    </li>
+                    <li>
+                        <strong>AUC-ROC</strong>
+                        <p>AUC stands for "Area Under the Curve," and ROC stands for "Receiver Operating Characteristic." This metric provides a graphical representation of a model's performance by plotting the True Positive Rate (TPR) against the False Positive Rate (FPR) at various threshold settings.</p>
+                        <img src="../../../images/ml/roc.png" alt=""> <br>
+                        <ul>
+                            <li>True Positive Rate (TPR): Also known as recall or sensitivity, TPR measures the proportion of actual positives that are correctly identified by the model. It is calculated as TP / (TP + FN).</li>
+                            <li>False Positive Rate (FPR): FPR measures the proportion of actual negatives that are incorrectly identified as positives by the model. It is calculated as FP / (FP + TN).</li>
+                        </ul>
+
+                        <p>According to Zhou (N.D.) ROC curve illustrates the trade-off between sensitivity and specificity (1 - FPR) across different thresholds. The AUC, a single scalar value, summarises the overall ability of the model to discriminate between positive and negative classes. An AUC of 1.0 indicates a perfect model, whereas an AUC of 0.5 suggests a model that performs no better than random guessing.</p>
+                        <p>The AUC-ROC curve is particularly useful for comparing the performance of multiple models and for assessing the quality of predictions across various thresholds, providing a more comprehensive evaluation than accuracy alone. It is also robust to imbalanced class distributions, making it a preferred metric in many practical applications</p>
+                    </li>
+                    <li>
+                        <strong>Log-Loss</strong>
+                        <p> Log-loss, also known as logistic loss or cross-entropy loss, is a fundamental evaluation metric for classification models, particularly in probabilistic classification scenarios. Log-loss measures the performance of a classification model whose output is a probability value between 0 and 1. It quantifies the accuracy of probabilistic predictions by comparing the predicted probabilities to the actual class labels.</p>
+                        <img src="../../../images/ml/log-loss.png" alt=""> <br>
+                        <p>Where:</p>
+                        <ul>
+                            <li>N is the number of samples.</li>
+                            <li>yi is the actual binary label of the i-th sample (0 or 1).</li>
+                            <li>pi is the predicted probability of the i-th sample being in class 1.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Regression Metrics</strong>
+                        <p>In the context of regression models, evaluating performance requires metrics that capture the accuracy and consistency of the model's predictions against the actual values. Three commonly used regression metrics are Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and R-squared (R2).</p>
+                        <ul>
+                            <li>RMSE (Root Mean Squared Error): This is the square root of the mean of the squared differences between prediction and actual observation. It's a popular metric because the square root brings it back to the same unit as the target variable.</li>
+                            <li>MAE (Mean Absolute Error): This is the mean of the absolute differences between prediction and actual observation. It measures the average magnitude of the errors in a set of predictions, without considering their direction.</li>
+                            <li>R Squared: This is a statistical measure that represents the proportion of the variance for a dependent variable that's explained by an independent variable or variables in a regression model.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h6>Links:</h6>
+                <ul class="actions">
+                    <li>
+                        <a href="https://github.com/Ngugi-Joy-Grace/machine-learning/blob/main/11/Unit11_model_Performance_Measurement.ipynb"
+                           target="_blank" class="button small primary">
+                            <span class="icon brands fa-github"></span>
+                            Performance Measurement
+                        </a>
+                    </li>
+                </ul>
+
+
+                <h3 class="major">References</h3>
+                <p>
+                    Kopper, A., Karkare, R., Paffenroth, R.C., Apelian, D. (2020) Model Selection and Evaluation for Machine Learning: Deep Learning in Materials Processing. Integrating Materials and Manufacturing Innovation 9, 287–300.
+                </p>
+                <p>
+                    Krishna, D., 2021. Model Selection and Evaluation [WWW Document]. Towards Data Science. URL <a
+                        href="https://towardsdatascience.com/model-selection-and-evaluation-57701ff13c2b" target="_blank">https://towardsdatascience.com/model-selection-and-evaluation-57701ff13c2b</a> (accessed 6.3.24).
+                </p>
+                <p>
+                    Zheng, A., 2015. Chapter 2. Evaluation Metrics. In: Evaluating Machine Learning Models. O’Reilly Media, Inc.
+                </p>
+                <p>
+                    Zhou, Z.-H., n.d. Machine Learning. Springer Nature Singapore.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="inner">
+            <h2 class="major">Get in touch</h2>
+            <p>Reach out and let's connect</p>
+            <form method="post" action="#">
+                <div class="fields">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name"/>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"/>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="4"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message"/></li>
+                </ul>
+            </form>
+            <ul class="contact">
+                <li class="icon solid fa-home">
+                    Nairobi, Kenya
+                </li>
+                <li class="icon solid fa-phone">+254 712 345 678</li>
+                <li class="icon solid fa-envelope"><a href="mailto:jngugi.grace@gmail.com">jngugi.grace@gmail.com</a>
+                </li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Ngugi Joy Grace</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../../assets/js/jquery.min.js"></script>
+<script src="../../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../../assets/js/browser.min.js"></script>
+<script src="../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../assets/js/util.js"></script>
+<script src="../../../assets/js/main.js"></script>
+<script src="../../../assets/js/custom.js"></script>
+</body>
+</html>

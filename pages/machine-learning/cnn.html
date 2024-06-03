@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Artefacts</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/x-icon" href="../../images/portfolio.png">
+    <link rel="stylesheet" href="../../assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="../../assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body class="is-preload">
+
+<button style="position: fixed; bottom: 30px; right: 30px; z-index: 99" onclick="topFunction()" id="myBtn"><span
+        class="icon solid fa-arrow-up"></span></button>
+
+<!-- Page Wrapper -->
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="../../index.html">Ngugi Joy Grace</a></h1>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <div class="inner">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="../../index.html">Back Home</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <a href="#" class="close">Close</a>
+        </div>
+    </nav>
+
+    <!-- Wrapper -->
+    <section id="wrapper">
+        <header>
+            <div class="inner">
+                <h2>
+                    <a href="../../index.html">
+                        <span class="icon solid fa-home"></span>
+                    </a>
+                    >
+                    <a href="../machine-learning/machine-learning.html">Machine Learning</a>
+                    >
+                    CNN Assignment
+                </h2>
+                <p>Machine Learning</p>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="wrapper">
+            <div class="inner">
+
+                <h3 class="major">CNN Assignment</h3>
+                <p>
+                    The second assignment of this module was an individual assessment and required to train a CNN using the CIFAR-10 dataset. The assignment required that once the model is trained, a presentation is made and recorded on the findings on the project.
+                </p>
+                <h6>Links:</h6>
+                <ul class="actions">
+                    <li>
+                        <a href="https://docs.google.com/presentation/d/1SLGbFZd0kVHED8CMqmmMfO7QH2e8u9-4/edit?usp=sharing&ouid=109377721895197205435&rtpof=true&sd=true"
+                           target="_blank" class="button small primary">
+                            <span class="icon brands fa-google-drive"></span>
+                            Presentation PowerPoint
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1SJyw6tSTefFvnkmp9flwsQUHbLo0tbze/view?usp=sharing"
+                           target="_blank" class="button small primary">
+                            <span class="icon brands fa-google-drive"></span>
+                            Presentation Video
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.google.com/document/d/1SOwBDF8g3kXaf6XJ_eXJANwbB99v0MPX/edit?usp=sharing&ouid=109377721895197205435&rtpof=true&sd=true"
+                           target="_blank" class="button small primary">
+                            <span class="icon brands fa-google-drive"></span>
+                            Video Transcript
+                        </a>
+                    </li>
+                </ul>
+                <p>
+                    Below is a summary of my implementation and presentation
+                </p>
+
+                <strong>Dataset Overview</strong>
+                <p>
+                    The CIFAR-10 dataset, collected by Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton in 2009, contains 60,000 images each 32x32 pixels in size, represented in three channels (Red, Green, and Blue). It comprises 10 classes, each representing different objects such as airplanes, automobiles, birds, cats, deer, dogs, frogs, horses, ships, and trucks, with each class containing 6000 images.
+                </p>
+
+                <strong>Data Preprocessing</strong>
+                <ul>
+                    <li><strong>Data Splitting:</strong> The dataset was divided into training (40,000 images), validation (10,000 images), and test sets (10,000 images). This split allows the model to learn from various features, fine-tune parameters, monitor for overfitting, and provide an unbiased evaluation.</li>
+                    <li><strong>Normalisation:</strong> The pixel values of the images were scaled from 0-255 to a range between 0 and 1. This transformation enhances the neural network's ability to converge more quickly and stably during the training process.</li>
+                    <li><strong>One-Hot Encoding:</strong> The categorical class labels were transformed into a binary matrix format, allowing the use of categorical cross-entropy loss during training, which is effective for multi-class problems.</li>
+                </ul>
+
+
+                <strong>Model Training</strong>
+                <ul>
+                    <li><strong>Artificial Neural Networks (ANNs): </strong>ANNs simulate human brains, consisting of input layers, several hidden layers, and an output layer. Data is processed through these layers using adjustable weights to enhance predictive accuracy.</li>
+                    <li><strong>Convolutional Neural Networks (CNNs) Structure:</strong> CNNs take advantage of the spatial hierarchy in images, using layers such as convolutional layers (for feature extraction), pooling layers (for spatial dimension reduction), fully connected layers (for high-level reasoning), and activation functions like ReLU to introduce non-linearity.</li>
+                    <li><strong>Model 1 Architecture:</strong> The model includes multiple Conv2D layers followed by MaxPooling2D layers, a Flatten layer, and Dense layers with Dropout to prevent overfitting. This model was tested over 10 epochs, showing signs of overfitting with training accuracy improving but validation accuracy plateauing.</li>
+                    <li><strong>Model 2 Architecture:</strong> This model increased complexity with multiple convolutional layers and dropout layers, using the RMSprop optimizer and a learning rate schedule. Despite improvements, overfitting persisted, indicated by a gap between training and validation performance.</li>
+                    <li><strong>Improving Model 2:</strong>  Strategies employed included batch normalization, data augmentation, early stopping, using the Adam optimizer, and increasing dropout to 0.3. These adjustments aimed to enhance generalization and reduce overfitting.</li>
+                </ul>
+
+                <strong>Model Performance</strong>
+                <ul>
+                    <li><strong>Model 3(improved Model 2) Performance:</strong> Significant improvements were observed with early stopping at 44 epochs, better stability, and convergence. The model displayed superior handling of overfitting, with closer training and validation accuracy and loss figures, indicating reliable predictions.</li>
+                    <img src="../../images/ml/model-3.png" alt="">
+                </ul>
+
+                <strong>Model Evaluation</strong>
+                <ul>
+                    <li>
+                        <p><strong>Classification Report:</strong> The final model showed outstanding performance in 'automobile' and 'ship' classes with high F1-scores. However, the 'cat' class remained challenging, demonstrating lower recall and F1-score. Overall, the model showed high specificity but varied sensitivity across classes.</p>
+                        <img src="../../images/ml/model-eval.png" alt="">
+                    </li>
+
+                    <li>
+                        <p><strong>Confusion Matrix:</strong> The confusion matrix revealed strong model accuracy in classes like 'Frog,' 'Automobile,' and 'Airplane,' but significant misclassifications in 'Cats' and 'Dogs,' reflecting challenges with visually similar features.</p>
+                        <img src="../../images/ml/confusion-matrix-cnn.png" alt="">
+                    </li>
+                </ul>
+
+                <strong>Recommendations</strong>
+
+                To address the identified challenges, the following enhancements are recommended:
+                <ul>
+                    <li>Enhanced Feature Engineering: Improve feature extraction processes to capture more relevant information.</li>
+                    <li>Data Augmentation: Target underperforming classes with image transformations to help the model learn robust features.</li>
+                    <li>Algorithm Tuning: Further tune model parameters and optimisation algorithms for better convergence.</li>
+                    <li>Advanced Techniques: Implement deeper CNN architectures to learn complex patterns and subtle distinctions between classes.</li>
+                </ul>
+
+                <strong>Conclusion</strong>
+                <p>
+                    This project demonstrated the exceptional effectiveness of CNNs for image recognition tasks, despite challenges like overfitting and computational demands. The adaptability of CNNs to various applications highlights their significant potential. Moving forward, addressing these challenges through improved training strategies and optimisation techniques will be essential to fully leverage CNN capabilities in diverse real-world scenarios.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="inner">
+            <h2 class="major">Get in touch</h2>
+            <p>Reach out and let's connect</p>
+            <form method="post" action="#">
+                <div class="fields">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name"/>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"/>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="4"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message"/></li>
+                </ul>
+            </form>
+            <ul class="contact">
+                <li class="icon solid fa-home">
+                    Nairobi, Kenya
+                </li>
+                <li class="icon solid fa-phone">+254 712 345 678</li>
+                <li class="icon solid fa-envelope"><a href="mailto:jngugi.grace@gmail.com">jngugi.grace@gmail.com</a>
+                </li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Ngugi Joy Grace</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../assets/js/browser.min.js"></script>
+<script src="../../assets/js/breakpoints.min.js"></script>
+<script src="../../assets/js/util.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/custom.js"></script>
+</body>
+</html>

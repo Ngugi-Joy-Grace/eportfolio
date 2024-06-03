@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Artefacts</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/x-icon" href="../../../images/portfolio.png">
+    <link rel="stylesheet" href="../../../assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="../../../assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body class="is-preload">
+
+<button style="position: fixed; bottom: 30px; right: 30px; z-index: 99" onclick="topFunction()" id="myBtn"><span
+        class="icon solid fa-arrow-up"></span></button>
+
+<!-- Page Wrapper -->
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="../../../index.html">Ngugi Joy Grace</a></h1>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <div class="inner">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="../../../index.html">Back Home</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <a href="#" class="close">Close</a>
+        </div>
+    </nav>
+
+    <!-- Wrapper -->
+    <section id="wrapper">
+        <header>
+            <div class="inner">
+                <h2>
+                    <a href="../../../index.html">
+                        <span class="icon solid fa-home"></span>
+                    </a>
+                    >
+                    <a href="../machine-learning.html">Machine Learning</a>
+                    >
+                    <a href="../units.html">Units</a>
+                    >
+                    Unit 7
+                </h2>
+                <p>Machine Learning</p>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="wrapper">
+            <div class="inner">
+
+                <h3 class="major">Unit 7: Introduction to Artificial Neural Networks (ANNs)</h3>
+                <p>
+                    Macukow states that (2016) ANNs are computational models inspired by the human brain's structure and function. They are designed to recognise patterns and solve complex problems by learning from data. ANNs consist of interconnected layers of nodes (neurons) that process input data to produce an output. Each connection between nodes has an associated weight, which is adjusted during training to improve the model's performance.
+                </p>
+                <p>
+                    The concept of ANNs dates back to the 1940s, with the pioneering work of Warren McCulloch and Walter Pitts, who proposed a model of artificial neurons(Yaqub, 2018). In the 1950s, Frank Rosenblatt developed the perceptron, an early type of neural network capable of binary classification tasks (Rosenblatt, 1958). Despite initial success, the limitations of single layer perceptrons, particularly their inability to solve non-linearly separable problems highlighted by Marvin Minsky and Seymour Papert in 1969, led to a decline in ANN research (Newell, 1969). However, the field experienced a resurgence in the 1980s with the development of multi-layer perceptrons (MLPs) and the backpropagation algorithm, which allowed for more complex and powerful models. Today, ANNs are a cornerstone of deep learning and are widely used in various applications, from image recognition to natural language processing.
+                </p>
+                <ol>
+                    <li>
+                        Single-Layer Perceptrons <br>
+
+                        <ul>
+                            <li>
+                                <strong>Structure</strong> <br>
+                                A single-layer perceptron consists of an input layer and an output layer, with no hidden layers in between. Each input node is connected to the output node through a weighted connection.
+                            </li>
+                            <li>
+                                <strong>Function</strong> <br>
+                                The perceptron receives input signals, multiplies them by their respective weights, sums the results, and applies an activation function (usually a step function) to produce the output. It is a simple model used for binary classification.
+                            </li>
+                            <li>
+                                <strong>Limitations</strong> <br>
+                                Single-layer perceptron can only solve linearly separable problems. They are incapable of handling more complex tasks that require non-linear decision boundaries.
+                            </li>
+                            <li>
+                                <strong>Example</strong> <br>
+                                The unit provided an example implementation of SLP by Dr. Mike Lakoju. The example focuses on implementing a simple perceptron using the NumPy library. NumPy is used to generate a sample simple dataset. The notebook begins with the initialisation of inputs as NumPy arrays containing the values 45 and 25, 45 representing the age and 25 years of experience.
+                            </li>
+                        </ul>
+                        <img src="../../../images/ml/weights.png" alt="">
+                        <p>
+                            The weights corresponding to these inputs are also defined as NumPy arrays with values 0.7 and 0.1, and their correctness is validated with 0.7. A sum function to compute the weighted sum of the inputs is introduced, serving as the perceptron's raw output before applying any activation function. The use of the dot product is emphasized as an efficient method for calculating the weighted sum, especially vital for large datasets.
+                        </p>
+                        <p>
+                            This serves as a foundation for constructing a perceptron by defining its inputs and weights and suggesting methods for processing these using NumPy’s robust array operations. However, the application of this on a more robust dataset could provide more insight into the functioning of a SLP.
+                        </p>
+                    </li>
+                    <li>
+                        Multi-Layer Perceptron (MLPs) <br>
+
+                        <ul>
+                            <li>
+                                <strong>Structure</strong> <br>
+                                MLPs consist of multiple layers: an input layer, one or more hidden layers, and an output layer. Each layer is composed of neurons, and the neurons in each layer are connected to those in the subsequent layer.
+                            </li>
+                            <li>
+                                <strong>Function</strong> <br>
+                                MLPs address the limitations of single layer perceptrons by introducing hidden layers and non-linear activation functions (e.g., sigmoid, ReLU). During training, the backpropagation algorithm is used to adjust the weights of the connections to minimize the error between the predicted and actual outputs.
+                            </li>
+                            <li>
+                                <strong>Capabilities</strong> <br>
+                                MLPs can solve complex, non-linearly separable problems. They are versatile and can be used for various tasks, including classification, regression, and function approximation.
+                            </li>
+                            <li>
+                                <strong>Example</strong> <br>
+                                To understand the concept of Multi-Layer Perceptrons (MLPs), Dr. Mike Lakoju’s example was reviewed. The MLP was trained to understand the XOR logic gate. The notebook begins by importing the necessary Python libraries: NumPy for numerical computations and Matplotlib for data visualisation. Two helper functions, `sigmoid` and `sigmoid_derivative`, are defined. These functions serve as the activation function and its derivative for the neurons in the network. The sigmoid function maps any value to a value between 0 and 1, which can be used to model probability.
+                                <br>
+                                The XOR dataset is initialized, consisting of all possible inputs to the XOR logic gate and their corresponding outputs. The weights for the connections between the neurons are also initialised with random values. The network is trained using the backpropagation algorithm. For each epoch (iteration of the training process), the following steps are performed:
+                                <br>
+                                <ul>
+                                    <li>Forward Propagation: The inputs are passed through the network, and an output is generated.</li>
+                                    <li>Calculating Error: The error of the network is calculated by comparing the generated output with the expected output.</li>
+                                    <li>Backward Propagation: The error is propagated back through the network, and the weights are adjusted accordingly.</li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>
+                    After the network is trained, a plot is generated showing how the error of the network decreased over the epochs.
+                </p>
+                <img src="../../../images/ml/epochs.png" alt="">
+                <p>
+                    This visualisation helps to understand how the network learned over time. The actual outputs and the predicted outputs of the network are compared to see how well the network has learned. It is observed that the neural network was able to produce values close to the actual values, demonstrating its ability to handle the complexity of the XOR operator dataset. The updated weights after the training process are displayed, which can be used for future predictions.
+                </p>
+                <p>
+                    A function `calculate_output` is defined that takes an instance of the dataset and returns the output of the network for that instance. Finally, the network is tested by passing in inputs and checking the outputs. The network correctly predicts the outputs for the XOR logic gate, demonstrating that it has successfully learned the XOR operation.
+                </p>
+                <h6>Summary</h6>
+                <p>
+                    Artificial Neural Networks (ANNs) are powerful tools that mimic the brain's neural networks to solve complex problems. From their origins in the 1940s to the advanced multi-layer perceptrons used today, ANNs have significantly evolved, overcoming early limitations to become integral to modern AI and machine learning. Understanding the structure and function of single-layer and multi-layer perceptron was very fundamental to grasping the broader capabilities and applications of ANNs in various fields as seen in the next units covered.
+                </p>
+                <h6>Links:</h6>
+                <ul class="actions">
+                    <li>
+                        <a href="https://github.com/Ngugi-Joy-Grace/machine-learning/blob/main/7/Unit07%20Ex1%20simple_perceptron.ipynb"
+                           target="_blank" class="button small primary">
+                            <span class="icon brands fa-github"></span>
+                            Simple Perceptron
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Ngugi-Joy-Grace/machine-learning/blob/main/7/Unit07%20Ex2%20perceptron_AND_operator.ipynb"
+                           target="_blank" class="button small primary">
+                            <span class="icon brands fa-github"></span>
+                            Perceptron & Operator
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Ngugi-Joy-Grace/machine-learning/blob/main/7/Unit07%20Ex3%20multi-layer%20Perceptron.ipynb"
+                           target="_blank" class="button small primary">
+                            <span class="icon brands fa-github"></span>
+                            Multi-layer Perceptron
+                        </a>
+                    </li>
+                </ul>
+
+
+                <h3 class="major">References</h3>
+                <p>
+                    Macukow, B. (2016) 'Neural Networks – State of Art, Brief History, Basic Models and Architecture', In: Macukow, B Computer Information Systems and Industrial Management. Springer International Publishing. 3–14.
+                </p>
+                <p>
+                    Newell, A. (1969) A Step toward the Understanding of Information Processes: Perceptrons. An Introduction to Computational Geometry. Marvin Minsky and Seymour Papert. M.I.T. Press, Cambridge, Mass., 1969. vi + 258 pp., illus. Cloth, 12; paper, 4.95. Science 165, 780–782.
+                </p>
+                <p>
+                    Rosenblatt, F. (1958) The perceptron: a probabilistic model for information storage and organization in the brain. Psychol. Rev. 65, 386–408.
+                </p>
+                <p>
+                    Yaqub, F. (2018) A Study on Artificial Neural Network. International Journal of Innovative Research in Science, Engineering and Technology 7(1). DOI:
+                    <a href="http://dx.doi.org/10.15680/IJIRSET.2018.0701093" target="_blank">http://dx.doi.org/10.15680/IJIRSET.2018.0701093</a>
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="inner">
+            <h2 class="major">Get in touch</h2>
+            <p>Reach out and let's connect</p>
+            <form method="post" action="#">
+                <div class="fields">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name"/>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"/>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="4"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message"/></li>
+                </ul>
+            </form>
+            <ul class="contact">
+                <li class="icon solid fa-home">
+                    Nairobi, Kenya
+                </li>
+                <li class="icon solid fa-phone">+254 712 345 678</li>
+                <li class="icon solid fa-envelope"><a href="mailto:jngugi.grace@gmail.com">jngugi.grace@gmail.com</a>
+                </li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Ngugi Joy Grace</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../../assets/js/jquery.min.js"></script>
+<script src="../../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../../assets/js/browser.min.js"></script>
+<script src="../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../assets/js/util.js"></script>
+<script src="../../../assets/js/main.js"></script>
+<script src="../../../assets/js/custom.js"></script>
+</body>
+</html>

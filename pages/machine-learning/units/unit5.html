@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Artefacts</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/x-icon" href="../../../images/portfolio.png">
+    <link rel="stylesheet" href="../../../assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="../../../assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body class="is-preload">
+
+<button style="position: fixed; bottom: 30px; right: 30px; z-index: 99" onclick="topFunction()" id="myBtn"><span
+        class="icon solid fa-arrow-up"></span></button>
+
+<!-- Page Wrapper -->
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="../../../index.html">Ngugi Joy Grace</a></h1>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <div class="inner">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="../../../index.html">Back Home</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <a href="#" class="close">Close</a>
+        </div>
+    </nav>
+
+    <!-- Wrapper -->
+    <section id="wrapper">
+        <header>
+            <div class="inner">
+                <h2>
+                    <a href="../../../index.html">
+                        <span class="icon solid fa-home"></span>
+                    </a>
+                    >
+                    <a href="../machine-learning.html">Machine Learning</a>
+                    >
+                    <a href="../units.html">Units</a>
+                    >
+                    Unit 5
+                </h2>
+                <p>Machine Learning</p>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="wrapper">
+            <div class="inner">
+
+                <h3 class="major">Unit 5. Clustering</h3>
+                <p>
+                    Ghosal et al. (2020) define clustering as a fundamental method in unsupervised learning, aiming to group data points into clusters based on similarity, with the goal of discovering inherent structures and patterns within the dataset. The different clustering algorithms vary and range from traditional methods like K-means to more sophisticated algorithms such as hierarchical clustering and density-based clustering as shown in Figure 1 below.
+                </p>
+                <img src="../../../images/ml/clustering-algorithms.png" alt="">
+                <p>
+                    Clustering plays a vital role across various domains. For example, in e-commerce, clustering can be used to group customers based on their purchase history, browsing behavior, demographics, or geographic location. This segmentation enables businesses to tailor their marketing campaigns to each segment's preferences, leading to improved customer engagement, higher conversion rates, and increased customer satisfaction.
+                </p>
+                <h6>Eportfolio Activity: </h6>
+                <p>
+                    The table shows the pathological test results for three individuals.
+                </p>
+                <img src="../../../images/ml/pathological-tests.png" alt="">
+                <p>
+                    <strong>Question: <br>Calculate Jaccard coefficient for the following pairs:
+                        •	(Jack, Mary)
+                        •	(Jack, Jim)
+                        •	(Jim, Mary)
+                    </strong>
+                </p>
+                <p>
+                    Answer: <br> To calculate the Jaccard coefficient for the pairs (Jack, Mary), (Jack, Jim), and (Jim, Mary), the pathological test results were converted into binary values for comparison.
+                </p>
+                <p>
+                    That is:
+                <ul>
+                    <li>Gender: M = 1, F = 0</li>
+                    <li>Fever: Y = 1, N = 0</li>
+                    <li>Cough: Y = 1, N = 0</li>
+                    <li>Test-1: P = 1, N/A = 0</li>
+                    <li>Test-2: P = 1, N/A = 0</li>
+                    <li>Test-3: P = 1, N/A = 0</li>
+                    <li>Test-4: P = 1, N/A = 0</li>
+                </ul>
+                </p>
+                <img src="../../../images/ml/table1.png" alt="" width="1000">
+                <p>
+                    The Jaccard coefficient is calculated as the size of the intersection divided by the size of the union of the sample sets.
+                </p>
+                <ul>
+                    <li>
+                        (Jack, Mary) <br>
+                        Intersection: [Fever, Test-1] -> 2 common attributes<br>
+                        Union: [Gender, Fever, Cough, Test-1, Test-2, Test-3, Test-4] -> 6 total attributes<br><br>
+
+                        Jaccard coefficient = Intersection / Union = 2 / 6 = 1/3 ≈ 0.33
+                    </li>
+
+                    <li>
+                        (Jack, Jim) <br>
+                        - Intersection: [Gender, Fever] -> 2 common attributes<br>
+                        - Union: [Gender, Fever, Cough, Test-1, Test-2, Test-3, Test-4] -> 6 total attributes<br><br>
+
+                        Jaccard coefficient = Intersection / Union = 2 / 6 = 1/3 ≈ 0.33
+                    </li>
+
+                    <li>
+                        (Jim, Mary) <br>
+                        - Intersection: [Fever] -> 1 common attribute<br>
+                        - Union: [Gender, Fever, Cough, Test-1, Test-2, Test-3, Test-4] -> 7 total attributes<br><br>
+
+                        Jaccard coefficient = Intersection / Union = 1 / 7 ≈ 0.14
+                    </li>
+                </ul>
+                <p>
+                    Summary: <br>
+                    - Jaccard coefficient (Jack, Mary): 0.33 <br>
+                    - Jaccard coefficient (Jack, Jim): 0.33 <br>
+                    - Jaccard coefficient (Jim, Mary): 0.14 <br>
+
+                </p>
+
+
+                <h3 class="major">References</h3>
+                <p>
+                    Ghosal, A., Nandy, A., Das, A.K., Goswami, S. & Panday, M. (2020) ‘A short review on different clustering techniques and their applications’,in: Kumar J.M. & Bhattacharya  B. (eds) Emerging Technology in Modelling and Graphics: Proceedings of IEM Graph 2018, 69-83. DOI:
+                    <a href="https://doi.org/10.1007/978-981-13-7403-6_9" target="_blank">https://doi.org/10.1007/978-981-13-7403-6_9</a>
+                </p>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="inner">
+            <h2 class="major">Get in touch</h2>
+            <p>Reach out and let's connect</p>
+            <form method="post" action="#">
+                <div class="fields">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name"/>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"/>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="4"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message"/></li>
+                </ul>
+            </form>
+            <ul class="contact">
+                <li class="icon solid fa-home">
+                    Nairobi, Kenya
+                </li>
+                <li class="icon solid fa-phone">+254 712 345 678</li>
+                <li class="icon solid fa-envelope"><a href="mailto:jngugi.grace@gmail.com">jngugi.grace@gmail.com</a>
+                </li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Ngugi Joy Grace</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../../assets/js/jquery.min.js"></script>
+<script src="../../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../../assets/js/browser.min.js"></script>
+<script src="../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../assets/js/util.js"></script>
+<script src="../../../assets/js/main.js"></script>
+<script src="../../../assets/js/custom.js"></script>
+</body>
+</html>

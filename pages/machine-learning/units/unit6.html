@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Artefacts</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/x-icon" href="../../../images/portfolio.png">
+    <link rel="stylesheet" href="../../../assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="../../../assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body class="is-preload">
+
+<button style="position: fixed; bottom: 30px; right: 30px; z-index: 99" onclick="topFunction()" id="myBtn"><span
+        class="icon solid fa-arrow-up"></span></button>
+
+<!-- Page Wrapper -->
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="../../../index.html">Ngugi Joy Grace</a></h1>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <div class="inner">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="../../../index.html">Back Home</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <a href="#" class="close">Close</a>
+        </div>
+    </nav>
+
+    <!-- Wrapper -->
+    <section id="wrapper">
+        <header>
+            <div class="inner">
+                <h2>
+                    <a href="../../../index.html">
+                        <span class="icon solid fa-home"></span>
+                    </a>
+                    >
+                    <a href="../machine-learning.html">Machine Learning</a>
+                    >
+                    <a href="../units.html">Units</a>
+                    >
+                    Unit 6
+                </h2>
+                <p>Machine Learning</p>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="wrapper">
+            <div class="inner">
+
+                <h3 class="major">Unit 6. Clustering with Python</h3>
+                <p>
+                    This unit focused on clustering with python more specifically K-Means Clustering. Wu (2021) describes  K-Means Clustering as an unsupervised learning algorithm used to partition a dataset into K distinct, non-overlapping subsets or clusters. The algorithm’s  aim is to minimise the variance within each cluster, making the points in each cluster as similar as possible.
+                </p>
+                <p>
+                    K-Means is an iterative algorithm that assigns each point to a cluster with the closest centroid. The centroid of these clusters is then calculated again by taking the average. The steps involved are as discussed below:
+                </p>
+                <ul>
+                    <li><code>Initialisation:</code> This involves selection of K initial cluster centroids randomly from the dataset. These centroids can be chosen randomly or by using some heuristic.</li>
+                    <li><code>Assignment Step:</code> Each data point is assigned to the nearest centroid. This creates K clusters based on the distance between data points and centroids. The distance is typically measured using Euclidean distance (Raschka et al., 2022).</li>
+                    <li><code>Update Step:</code> The new centroids are calculated as the mean of all data points assigned to each cluster. The centroid of a cluster is updated to the average position of all points within that cluster.</li>
+                    <li><code>Repeat Steps 2 and 3:</code> All data points are reasssigned the nearest centroid based on the updated centroids and then centroids recalculate. This iterative process continues until the centroids no longer change significantly, indicating that the algorithm has converged.</li>
+                    <li><code>Termination:</code> The algorithm stops when the centroids have stabilised, that is, their positions do not change significantly between iterations or after a predetermined number of iterations.</li>
+                </ul>
+                <p>
+                    Advantages of K-Means:
+                </p>
+                <ul>
+                    <li><code>Simplicity and Ease of Implementation:</code> K-Means excels in its simplicity and ease of implementation. The algorithm is straightforward and easy to implement.</li>
+                    <li><code>Computational Efficiency:</code> K-Means is highly efficient in terms of computational complexity, especially for large datasets. The algorithm's time complexity is O(n * k * t), where n is the number of data points, k is the number of clusters, and t is the number of iterations, making it scalable and suitable for big data applications (Gupta et al., 2021).</li>
+                    <li><code>Effectiveness with Well-Separated Clusters:</code> K-Means performs exceptionally well when clusters are well-separated and spherical in shape. It excels in scenarios where the dataset has distinct, non-overlapping clusters, providing clear and interpretable results.</li>
+                    <li><code>Versatility and Flexibility:</code> K-Means can be applied to various types of data and can handle different scales and dimensions. It is versatile enough to be used in numerous fields such as image segmentation, market segmentation, document clustering, and more.</li>
+                    <li><code>Ease of Understanding and Interpretation:</code> The results of K-Means clustering are easy to understand and interpret. The centroids represent the center of each cluster, and the data points within each cluster are similar to each other, making it intuitive to analyze and visualize.</li>
+                </ul>
+                <p>
+                    Limitations of K-Means:
+                </p>
+                <ul>
+                    <li><code>Pre-specification of K:</code> The number of clusters (K) must be specified in advance, which may not always be known. Determining the optimal number of clusters often requires additional methods such as the elbow method or silhouette analysis, adding complexity to the process.</li>
+                    <li><code>Sensitivity to Initial Centroid Placement:</code> The initial placement of centroids can significantly affect the final clustering outcome. Poor initialization can lead to suboptimal solutions. Methods like K-Means++ can be used to improve the initialization process, but the issue remains a challenge (Bahmani et al., 2012).</li>
+                    <li><code>Local Minimum Convergence:</code> The algorithm may converge to a local minimum rather than the global minimum, depending on the initial centroid positions. This can result in less optimal clustering solutions. Multiple runs with different initializations are often necessary to find a more optimal solution.</li>
+                    <li><code>Assumption of Spherical and Equally Sized Clusters:</code> K-Means assumes that clusters are spherical and of equal size, which may not hold true for all datasets. This assumption limits its effectiveness for datasets with clusters of irregular shapes or varying sizes.</li>
+                    <li><code>Difficulty Handling Noise and Outliers:</code> K-Means is sensitive to noise and outliers, which can distort the cluster centroids and adversely affect the clustering performance. Outliers can disproportionately influence the centroid calculation, leading to incorrect clustering results (Gupta et al., 2021).</li>
+                    <li><code>Scalability Issues with Very Large Datasets:</code> While K-Means is generally efficient, handling extremely large datasets with high dimensionality can still pose scalability challenges. Advanced techniques and optimizations, such as mini-batch K-Means, may be necessary to manage very large datasets effectively.</li>
+                </ul>
+                <h6>Links:</h6>
+                <ul class="actions">
+                    <li>
+                        <a href="https://github.com/Ngugi-Joy-Grace/machine-learning/blob/main/6/Iris.ipynb"
+                           target="_blank" class="button small primary">
+                            <span class="icon brands fa-github"></span>
+                            Iris.ipynb
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Ngugi-Joy-Grace/machine-learning/blob/main/6/wine.ipynb"
+                           target="_blank" class="button small primary">
+                            <span class="icon brands fa-github"></span>
+                            Wine.ipynb
+                        </a>
+                    </li>
+                </ul>
+
+
+                <h3 class="major">References</h3>
+                <p>
+                    Bahmani, B., Moseley, B., Vattani, A., Kumar, R. & Vassilvitskii, S., (2012) Scalable K-Means++. DOI:
+                    <a href="https://doi.org/10.48550/arXiv.1203.6402" target="_blank">https://doi.org/10.48550/arXiv.1203.6402</a>
+                </p>
+                <p>
+                    Gupta, A., Sharma, H. & Akhtar, A. (2021). A comparative analysis of k-means and hierarchical clustering. EPRA International Journal of Multidisciplinary Research (IJMR) 412–418. DOI:
+                    <a href="http://dx.doi.org/10.36713/epra8308" target="_blank">http://dx.doi.org/10.36713/epra8308</a>
+                </p>
+                <p>
+                    Raschka, S., Liu, Y. & Mirjalili, V. (2022). 'Working with Unlabeled Data – Clustering Analysis' In: Raschka, S., Liu, Y. & Mirjalili, V. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing.
+                </p>
+                <p>
+                    Wu, B. (2021). 'K-means clustering algorithm and Python implementation' In: 2021 IEEE International Conference on Computer Science, Artificial Intelligence and Electronic Engineering (CSAIEE). IEEE. 55–59.
+                </p>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="inner">
+            <h2 class="major">Get in touch</h2>
+            <p>Reach out and let's connect</p>
+            <form method="post" action="#">
+                <div class="fields">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name"/>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"/>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="4"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message"/></li>
+                </ul>
+            </form>
+            <ul class="contact">
+                <li class="icon solid fa-home">
+                    Nairobi, Kenya
+                </li>
+                <li class="icon solid fa-phone">+254 712 345 678</li>
+                <li class="icon solid fa-envelope"><a href="mailto:jngugi.grace@gmail.com">jngugi.grace@gmail.com</a>
+                </li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Ngugi Joy Grace</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../../assets/js/jquery.min.js"></script>
+<script src="../../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../../assets/js/browser.min.js"></script>
+<script src="../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../assets/js/util.js"></script>
+<script src="../../../assets/js/main.js"></script>
+<script src="../../../assets/js/custom.js"></script>
+</body>
+</html>

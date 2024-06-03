@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Artefacts</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/x-icon" href="../../../images/portfolio.png">
+    <link rel="stylesheet" href="../../../assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="../../../assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body class="is-preload">
+
+<button style="position: fixed; bottom: 30px; right: 30px; z-index: 99" onclick="topFunction()" id="myBtn"><span
+        class="icon solid fa-arrow-up"></span></button>
+
+<!-- Page Wrapper -->
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="../../../index.html">Ngugi Joy Grace</a></h1>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <div class="inner">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="../../../index.html">Back Home</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <a href="#" class="close">Close</a>
+        </div>
+    </nav>
+
+    <!-- Wrapper -->
+    <section id="wrapper">
+        <header>
+            <div class="inner">
+                <h2>
+                    <a href="../../../index.html">
+                        <span class="icon solid fa-home"></span>
+                    </a>
+                    >
+                    <a href="../machine-learning.html">Machine Learning</a>
+                    >
+                    <a href="../units.html">Units</a>
+                    >
+                    Unit 8
+                </h2>
+                <p>Machine Learning</p>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="wrapper">
+            <div class="inner">
+
+                <h3 class="major">Unit 8: Training an Artificial Neural Network</h3>
+                <p>
+                    In Unit 8, the process of training an Artificial Neural Network (ANN) was covered. Building on the foundational understanding of ANN structures from the previous week, this unit emphasised the learning mechanisms of neural networks, particularly focusing on error handling and the role of backpropagation.
+                </p>
+                <p>
+                    Training Process: <br>
+                    Elmsley (2019) states that :
+                    ‘Training an ANN is an iterative process in which training data examples are presented to the network one by one, and the values of the weights are adjusted each time.’
+                    This process involves these steps:
+                </p>
+               <ul>
+                   <li><strong>Error Calculation and Learning:</strong>  The core of neural network training involves the network learning from its mistakes. This is achieved by comparing the network's output to the expected output (ground truth) and calculating the error or loss . This error provides critical feedback to the network.</li>
+                   <li><strong>Backpropagation:</strong> A pivotal component in training ANNs, backpropagation is an algorithm used to adjust the weights of the neurons in the network. After the error is calculated, backpropagation works by propagating this error backward through the network layers, updating the weights to minimize the error in subsequent iterations (Wright et al., 2022). The process involves computing the gradient of the loss function with respect to each weight by the chain rule, allowing the network to learn the correct parameters that contribute to accurate predictions.</li>
+                   <li><strong>Weight Adjustment:</strong> The adjustments in the neuron connection weights are done using optimization algorithms like Gradient Descent. By iteratively updating the weights in the direction that reduces the error, the network gradually improves its performance.</li>
+               </ul>
+                <h6><strong>Task: Gradient Descent Function</strong></h6>
+                <p>
+                    This task required the observation of changes in the cost when the iteration number and learning rate are changed.
+                </p>
+                <p>
+                    Secnario 1: <br>
+                    Changed iterations from 100 to 200, while keeping the learning rate 0.08.
+                </p>
+                <img src="../../../images/ml/mse.png" alt="">
+                <p>
+                    The blue line indicates the MSE for 100 iterations, while the red dashed line represents the MSE for the first 100 of 200 iterations. Both lines exhibit a similar trend, showcasing a significant reduction in MSE as the iterations increase. This indicates whether 100 or 200 iterations, the reduction in MSE within the first 100 iterations follows the same pattern. Therefore, most of the error reduction occur within the first 100 iterations.
+                </p>
+                <p>
+                    Scenario 2: <br>
+                    Different learning rates (0.01, 0.08, 0.5) with the 100 iterations.
+                </p>
+                <ul>
+                    <li>
+                        <strong>Learning Rate 0.01</strong> <br>
+                        The MSE decreases rapidly initially and then stabilizes, converging to a low value. This indicates that the learning rate is small enough to allow the network to learn effectively without overshooting the minimum error.
+                    </li>
+                    <li>
+                        <strong>Learning Rate 0.08</strong> <br>
+                        The MSE also decreases rapidly and stabilizes at a low value, similar to the plot with a learning rate of 0.01. This suggests that a learning rate of 0.08 is still suitable for effective learning, achieving convergence efficiently without significant overshooting.
+                    </li>
+                    <li>
+                        <strong>Learning Rate 0.5</strong> <br>
+                        The MSE starts decreasing initially but then increases dramatically, indicating divergence. This high learning rate causes the network to overshoot the minimum error, leading to instability and failure to converge.
+                    </li>
+                </ul>
+                <img src="../../../images/ml/learning-rate.png" alt="">
+                <img src="../../../images/ml/learning-rate-08.png" alt="">
+                <img src="../../../images/ml/learning-rate-05.png" alt="">
+
+                <h6>Links:</h6>
+                <ul class="actions">
+                    <li>
+                        <a href="https://github.com/Ngugi-Joy-Grace/machine-learning/blob/main/8/Unit08%20Ex4%20gradient_descent_cost_function.ipynb"
+                           target="_blank" class="button small primary">
+                            <span class="icon brands fa-github"></span>
+                            Gradient Descent Cost Function
+                        </a>
+                    </li>
+                </ul>
+
+
+                <h3 class="major">References</h3>
+                <p>
+                    Elmsley, A. (2019) Training to train: Artificial Neural Networks, part II. The Sound of AI. Available from:
+                    <a href="https://medium.com/the-sound-of-ai/training-to-train-artificial-neural-networks-part-ii-b1b4efd944be" target="_blank">https://medium.com/the-sound-of-ai/training-to-train-artificial-neural-networks-part-ii-b1b4efd944be</a> [Accessed 2 June 2024].
+                </p>
+                <p>
+                    Wright, L.G., Onodera, T., Stein, M.M., Wang, T., Schachter, D.T., Hu, Z., McMahon, P.L., 2022. Deep physical neural networks trained with backpropagation. Nature 601, 549–555.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="inner">
+            <h2 class="major">Get in touch</h2>
+            <p>Reach out and let's connect</p>
+            <form method="post" action="#">
+                <div class="fields">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name"/>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"/>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="4"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message"/></li>
+                </ul>
+            </form>
+            <ul class="contact">
+                <li class="icon solid fa-home">
+                    Nairobi, Kenya
+                </li>
+                <li class="icon solid fa-phone">+254 712 345 678</li>
+                <li class="icon solid fa-envelope"><a href="mailto:jngugi.grace@gmail.com">jngugi.grace@gmail.com</a>
+                </li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Ngugi Joy Grace</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="../../../assets/js/jquery.min.js"></script>
+<script src="../../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../../assets/js/browser.min.js"></script>
+<script src="../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../assets/js/util.js"></script>
+<script src="../../../assets/js/main.js"></script>
+<script src="../../../assets/js/custom.js"></script>
+</body>
+</html>
